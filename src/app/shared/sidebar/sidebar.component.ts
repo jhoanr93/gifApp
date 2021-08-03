@@ -10,10 +10,12 @@ export class SidebarComponent  {
 
   constructor( private gifsService: GifsService) { }
 
- 
-
   get records(){
     return this.gifsService.records;
+  }
+
+  search( term:string ){
+    this.gifsService.SearchGifs( term );
   }
 
 }
